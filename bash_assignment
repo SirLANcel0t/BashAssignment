@@ -1,5 +1,8 @@
 #!/bin/bash
 
+HALLO DIT IS EEN TOEVOEGING
+EENS EVEN KIJKEN OF DIT WERKT 
+
 # alle arguments op een rijtje;
 # rm [bestandsnaam]  ; verwijdert een bestand door het te zippen en naar trash te verhuizen
 # rm -u [bestandsnaam]   ; maakt het verwijderen ongedaan
