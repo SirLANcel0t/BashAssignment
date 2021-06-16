@@ -3,6 +3,7 @@ Assignment in which we created an alias for the 'rm' command
 
 
 requirements: 
+
 1- rm will ask the user to confirm deleting the file.
 
 2- Every deleted file will be zipped and moved to a special folder named trash, which is located in
