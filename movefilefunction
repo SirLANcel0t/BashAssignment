@@ -1,0 +1,6 @@
+MoveAFile(){
+    mv $1 ~/trash
+}
+
+
+MoveAFile $1
