@@ -48,15 +48,15 @@ ZipAFile()
     {
     #de syntax om iets te zippen is als volgt:
     #zip [archiefnaam] [bestandnaam]
-    echo "niks"
+    zip $1 $1.zip $1
+    mv $1.zip ~/trash
+    echo "$1, pw=true" >> ~/trash/logger.txt
     }   
     
     MakeTrashFolder
-    MoveAFile $1
+    #MoveAFile $1
+    ZipAFile $1
 
 }
 
-
-
 alias rm=Main
-
