@@ -12,23 +12,53 @@
 
 
 
-#ik maak een Main functie zodat we die aan het eind als alias kunnen gebruiken.
+
+#Main functie zodat we die aan het eind als alias kunnen gebruiken.
 #alles gebeurt in Main
-
-
 Main(){
 
 
 
-MakeTrashFolder(){
+MakeTrashFolder()
+    {
     #deze functie maakt de trash folder in de home directory, indien die nog niet bestaat.
     #als de trash folder wel al bestaat, gaat er ook niks mis of iets.
     mkdir -p  ~/trash
-}
-MakeTrashFolder
+    
+    #hij moet ook een tekstbestand maken wat bijhoudt welke bestanden verwijdert zijn en welke niet, en of ze met een wachtwoord beveiligd zijn.
+    
+    #ik gebruik de touch command , want die maakt het aan als het bestand niet bestaat, 
+    #en anders 'raakt hij het aan', dan wordt 'date modified' geupdate. meer ook niet
+    
+    touch ~/trash/logger.txt
+    
+    #getest, dit werkt
+    }
+
+MoveAFile()
+    {
+    #dit werkt nog niet helemaal. bestanden zonder spatie werken, maar bestanden met spatie geeft een wazige error
+    #
+    
+    mv $1 ~/trash
+    echo "$1, pw=false" >> ~/trash/logger.txt
+    }
+
+ZipAFile()
+    {
+    #de syntax om iets te zippen is als volgt:
+    #zip [archiefnaam] [bestandnaam]
+    zip $1 $1.zip $1
+    mv $1.zip ~/trash
+    echo "$1, pw=true" >> ~/trash/logger.txt
+    }   
+    
+    MakeTrashFolder
+    #MoveAFile $1
+    ZipAFile $1
 
 }
+
 
 
 alias rm=Main
-
