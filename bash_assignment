@@ -48,15 +48,33 @@ ZipAFile()
     {
     #de syntax om iets te zippen is als volgt:
     #zip [archiefnaam] [bestandnaam]
-    zip $1 $1.zip $1
+    zip $1.zip $1
     mv $1.zip ~/trash
-    echo "$1, pw=true" >> ~/trash/logger.txt
-    }   
+    path=$(realpath $1)
+    echo "$path, pw=false" >> ~/trash/logger.txt
+    }  
+    
+ZipAFilePW()
+    {
+    #de syntax om iets te zippen is als volgt:
+    #zip [archiefnaam] [bestandnaam]
+    zip -e $1.zip $1
+    mv $1.zip ~/trash
+    path=$(realpath $1)
+    echo "$path, pw=true" >> ~/trash/logger.txt
+    }  
+
+GetFileFromLog()
+    {
+    result=$(grep -oP \^\.\*$1 trash/logger.txt)
+    echo "$result"
+    }
     
     MakeTrashFolder
     #MoveAFile $1
-    ZipAFile $1
+    #ZipAFilePW $1
+    GetFileFromLog $1
 
-}
+} 
 
 alias rm=Main
