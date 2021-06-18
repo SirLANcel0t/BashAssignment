@@ -59,7 +59,7 @@ password, the rm command should ask for the password by printing a message on th
 the provided password is incorrect, the command will repeat asking for the password two more
 times.
 
-alle arguments op een rijtje:
+alle arguments op een rijtje
 rm [bestandsnaam] :verwijdert een bestand door het te zippen en naar trash te verhuizen
 rm -u [bestandsnaam] : maakt het verwijderen ongedaan
 rm -p [wachtwoord] [bestandsnaam] : verwijdert een bestand door het naar trash te verhuizen met een wachtwoord
