@@ -37,23 +37,13 @@ Main(){
         }
         
 
-    MoveAFile()
-        {
-        #dit werkt nog niet helemaal. bestanden zonder spatie werken, maar bestanden met spatie geeft een wazige error
-        #
-        
-        mv $1 ~/trash
-        echo "$1, pw=false" >> ~/trash/logger.txt
-        }
-        
-
     ZipAFile()
         {
         #de syntax om iets te zippen is als volgt:
         #zip [archiefnaam] [bestandnaam]
-        zip $1.zip $1
-        mv $1.zip ~/trash
-        path=$(realpath $1)
+        zip -qqrm $filename.zip $filename
+        mv $filename.zip ~/trash
+        path=$(realpath $filename)
         echo "$path, pw=false" >> ~/trash/logger.txt
         }  
         
@@ -62,17 +52,24 @@ Main(){
         {
         #de syntax om iets te zippen is als volgt:
         #zip [archiefnaam] [bestandnaam]
-        zip -e $1.zip $1
-        mv $1.zip ~/trash
-        path=$(realpath $1)
+        zip -qqerm $filename.zip $filename
+        mv $filename.zip ~/trash
+        path=$(realpath $filename)
         echo "$path, pw=true" >> ~/trash/logger.txt
         }  
-        
-
-    GetFileFromLog()
+         
+ 
+#     GetFileFromLog()
+#         {
+#         result=$(grep -oP \^\.\*$1 trash/logger.txt)
+#         echo "$result"
+#         }
+    
+    
+    Undelete()
         {
-        result=$(grep -oP \^\.\*$1 trash/logger.txt)
-        echo "$result"
+#             result=$(grep -oP '.*/(?=\Q'"$filename"'\E)' ~/trash/logger.txt)
+            unzip ~/trash/$filename #-d $result
         }
         
     Confirmation()
@@ -138,9 +135,9 @@ Main(){
             then
                 echo "rm+: cannot remove a directory without -r"
                 
-            elif ! [[ -e $1 || -e ~/$1 || $1 == "-u" || $1 == "-p" || $1 == "-r" ]]
-            then
-                echo "rm+: this file or directory does not exist"
+#             elif ! [[ -e $1 || -e ~/$1 || $1 == "-u" || $1 == "-p" || $1 == "-r" ]]
+#             then
+#                 echo "rm+: this file or directory does not exist"
             else
                 filename=$1
             fi
@@ -148,11 +145,29 @@ Main(){
         done
         }
         
-    ChooseFunction()
+
+        ChooseFunction()
         {
             #als password true is en delete is true, voer dan dit uit 
             #als undelete true is, voer dan iets anders uit 
             #kies hier welke functies uitgevoerd worden, je kent het wel
+            
+            if [ $haspassword == "true" ]
+            then
+                if [ $undelete == "true" ]
+                then
+                    Undelete
+                else
+                    ZipAFilePW
+                fi
+            else
+                if [ $undelete == "true" ]
+                then
+                    Undelete
+                else
+                    ZipAFile
+                fi                
+            fi
         }
         
 #=============================================================================#
