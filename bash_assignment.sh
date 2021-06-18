@@ -75,12 +75,98 @@ Main(){
         echo "$result"
         }
         
+    Confirmation()
+        {
+
+        echo "Are you sure you want to delete this file?" 
+        echo "Type Y or N"
+        
+        read answer
+        
+        if [[ "$answer" == "Y" || "$answer" == "y" ]]
+        then
+            # en dan hier de functie die uitgevoerd wordt
+            # verwijder iets
+            echo "removing"
+            
+        elif [[ "$answer" == "N" || "$answer" == "n" ]]
+        then
+            # en dan hier.... niet. hier gebeurt niks
+            echo "oke dan niet"
+            
+        else    
+            echo "Input not recognised. Please try again "
+            
+        fi
+        }
+
+
+    #dit analyseert alle arguments, of het options, een password of een bestandsnaam is
+    AnalyseArguments()
+        {
+        undelete="false"
+        haspassword="false"
+        recursive="false"
+        filename=""
+        password=""
+
+        while [ $# -gt 0 ]
+        do
+            if [[ $1 == "-u" && $haspassword == "false" ]]
+            then
+                undelete="true"
+
+            elif [[ $1 == "-p" && $undelete == "false" ]]
+            then
+                haspassword="true"
+                setpassword="true"
+            
+            elif [ $1 == "-r" ]
+            then
+                recursive="true"
+            
+            elif [[ $1 != "-p" && $1 != "-u" && $1 != "-r" && $setpassword == "true" ]]
+            then
+                setpassword="false"
+                password=$1
+                
+            elif [[ $1 == "-p" && $undelete == "true" ]] || [[ $1 == "-u" && $haspassword == "true" ]]
+            then
+                echo "rm+: cannot use -u and -p at the same time"
+                
+            elif [[ $undelete == "false" && $recursive == "false" && -d ~/$1 ]]
+            then
+                echo "rm+: cannot remove a directory without -r"
+                
+            elif ! [[ -e $1 || -e ~/$1 || $1 == "-u" || $1 == "-p" || $1 == "-r" ]]
+            then
+                echo "rm+: this file or directory does not exist"
+            else
+                filename=$1
+            fi
+        shift
+        done
+        }
+        
+    ChooseFunction()
+        {
+            #als password true is en delete is true, voer dan dit uit 
+            #als undelete true is, voer dan iets anders uit 
+            #kies hier welke functies uitgevoerd worden, je kent het wel
+        }
+        
 #=============================================================================#
 #dit waren alle functies, hieronder hoe en wanneer het uitgevoerd gaat worden #
 #=============================================================================#
 
     #altijd MakeTrashFolder, want waarom niet. als de folder al is, gebeurt er toch niks
     MakeTrashFolder
+    
+    #deze functie analyseert alle inkomende arguments
+    AnalyseArguments "$@" 
+    
+    #op basis van ingevoerde arguments, wordt gekozen wat er uitgevoerd gaat worden!
+    ChooseFunction 
 
 
 
