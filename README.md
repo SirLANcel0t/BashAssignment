@@ -5,6 +5,7 @@ Takenlijst:
 TO DO:
 - Een manier om arguments van de functie te kunnen analyseren (te kijken wat de options -u -r -p zijn en wat het wachtwoord is en wat het bestandsnaam)
 - Kunnen we al wachtwoorden toevoegen aan het logbestand? zodat ze uitgelezen kunnen worden?
+- Correct terugzetten van bestanden met -u (dus via uitlezen van de file path)
 - Alles samenvoegen
 - bugtesten
 
