@@ -36,6 +36,7 @@ Main(){
         }
         
 
+
     MoveAFile()
         {
         #dit werkt nog niet helemaal. bestanden zonder spatie werken, maar bestanden met spatie geeft een wazige error
@@ -78,6 +79,7 @@ Main(){
         #MoveAFile $1
         #ZipAFilePW $1
         GetFileFromLog $1
+
 
 } 
 
