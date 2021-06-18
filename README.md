@@ -1,4 +1,26 @@
 # BashAssignment
+
+Takenlijst:
+
+TO DO:
+- Een manier om arguments van de functie te kunnen analyseren (te kijken wat de options -u -r -p zijn en wat het wachtwoord is en wat het bestandsnaam)
+- Kunnen we al wachtwoorden toevoegen a
+- Alles samenvoegen
+- bugtesten
+
+DONE:
+- Bestanden kunnen zippen zonder wachtwoord
+- Bestanden kunnen zippen met wachtwoord
+- Bestanden verplaatsen naar de trash folder
+- een trash folder aanmaken in de home directory (~/) als die nog niet bestaat, geen error als hij wel bestaat
+- een logbestand aanmaken die bijhoudt wat er verwijderd is, waar het vandaan kwam en of het een wachtwoord heeft
+- een bevestiging vragen aan de gebruiker of hij een bepaald bestand daadwerkelijk wil verwijderen
+
+
+
+
+
+
 Assignment in which we created an alias for the 'rm' command
 
 
