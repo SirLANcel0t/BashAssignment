@@ -15,6 +15,7 @@
 
 #Main functie zodat we die aan het eind als alias kunnen gebruiken.
 #alles gebeurt in Main
+
 Main(){
 
 
@@ -35,7 +36,6 @@ Main(){
         #getest, dit werkt
         }
         
-
 
     MoveAFile()
         {
@@ -75,10 +75,13 @@ Main(){
         echo "$result"
         }
         
-        MakeTrashFolder
-        #MoveAFile $1
-        #ZipAFilePW $1
-        GetFileFromLog $1
+#=============================================================================#
+#dit waren alle functies, hieronder hoe en wanneer het uitgevoerd gaat worden #
+#=============================================================================#
+
+    #altijd MakeTrashFolder, want waarom niet. als de folder al is, gebeurt er toch niks
+    MakeTrashFolder
+
 
 
 } 
