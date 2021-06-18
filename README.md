@@ -62,9 +62,9 @@ times.
 alle arguments op een rijtje
 - rm [bestandsnaam] :verwijdert een bestand door het te zippen en naar trash te verhuizen
 - rm -u [bestandsnaam] : maakt het verwijderen ongedaan
-rm -p [wachtwoord] [bestandsnaam] : verwijdert een bestand door het naar trash te verhuizen met een wachtwoord
-rm -u [bestandsnaam] : als het bestand met een wachtwoord beveiligd is, dan wordt er gevraagd om het wachtwoord voordat je het terug kan halen
-rm -r [foldernaam] : verwijdert een hele folder met alles erin
-rm -u [foldernaam] : maakt het verwijderen van een folder ongedaan
-rm -r -p [wachtwoord] [foldernaam] : verwijdert een folder met alles erin en beveiligt het met een wachtwoord
-rm -u [foldernaam] : maakt het verwijderen van een folder ongedaan en als er een wachtwoord bij zat dan vraagt hij om het wachtwoord
+- rm -p [wachtwoord] [bestandsnaam] : verwijdert een bestand door het naar trash te verhuizen met een wachtwoord
+- rm -u [bestandsnaam] : als het bestand met een wachtwoord beveiligd is, dan wordt er gevraagd om het wachtwoord voordat je het terug kan halen
+- rm -r [foldernaam] : verwijdert een hele folder met alles erin
+- rm -u [foldernaam] : maakt het verwijderen van een folder ongedaan
+- rm -r -p [wachtwoord] [foldernaam] : verwijdert een folder met alles erin en beveiligt het met een wachtwoord
+- rm -u [foldernaam] : maakt het verwijderen van een folder ongedaan en als er een wachtwoord bij zat dan vraagt hij om het wachtwoord
