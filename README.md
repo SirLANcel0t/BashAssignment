@@ -21,7 +21,8 @@ resultaat bugtesting vorige week
 - regel van bestand wordt nog niet uit de logger gehaald
 (omgekeerde grep)
 
-- oorspronkelijke zipbestand moet weg
+- oorspronkelijke zipbestand moet weg 
+tip : met \rm gebruik je de rm zonder alias, dus dit kun je gebruiken om het oorspronkelijke zip bestand te verwijderen
 
 - folder met spatie werkt niet
 
