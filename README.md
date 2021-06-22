@@ -16,13 +16,13 @@ resultaat bugtesting vorige week
 
 +++++++++++++++++++++++++++++++
 
-- nog geen bevestiging als je iets wilt verwijderen
+x nog geen bevestiging als je iets wilt verwijderen
 
-- oorspronkelijke zipbestand moet weg 
+x  oorspronkelijke zipbestand moet weg 
 
 tip : met \rm gebruik je de rm zonder alias, dus dit kun je gebruiken om het oorspronkelijke zip bestand te verwijderen
 
-- folder met spatie werkt niet
+x folder met spatie werkt niet
 
 - bestand vraagt alsnog om een wachtwoord terwijl we al een wachtwoord als parameter meegeven
 
