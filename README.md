@@ -10,9 +10,9 @@ TO DO:
 - Alles samenvoegen
 - bugtesten
 
-===========================================
-= resultaat bugtesting vorige week        =
-===========================================
++++++++++++++++++++++++++++++++
+resultaat bugtesting vorige week
++++++++++++++++++++++++++++++++
 - nog geen bevestiging als je iets wilt verwijderen
 
 - regel van bestand wordt nog niet uit de logger gehaald
