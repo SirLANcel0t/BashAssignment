@@ -10,6 +10,20 @@ TO DO:
 - Alles samenvoegen
 - bugtesten
 
+===========================================
+= resultaat bugtesting vorige week        =
+===========================================
+- nog geen bevestiging als je iets wilt verwijderen
+
+- regel van bestand wordt nog niet uit de logger gehaald
+(omgekeerde grep)
+
+- oorspronkelijke zipbestand moet weg
+
+- folder met spatie werkt niet
+
+- bestand vraagt alsnog om een wachtwoord terwijl we al een wachtwoord als parameter meegeven
+
 DONE:
 - Bestanden kunnen zippen zonder wachtwoord
 - Bestanden kunnen zippen met wachtwoord
