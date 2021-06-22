@@ -72,6 +72,7 @@ Main(){
             unzip ~/trash/$filename #-d $result
             grep -v $filename ~/trash/logger.txt > ~/trash/logger.txt.tmp
             mv ~/trash/logger.txt.tmp ~/trash/logger.txt
+            \rm ~/trash/$filename".zip"
         }
         
     Confirmation()
