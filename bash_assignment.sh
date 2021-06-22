@@ -87,15 +87,21 @@ Main(){
         then
             # en dan hier de functie die uitgevoerd wordt
             # verwijder iets
-            echo "removing"
+            echo "Removing file"
+            if [ $1 == "ZipAFile" ]
+            then
+                ZipAFile
+            else [ $1 == "ZipAFilePW" ]
+                ZipAFilePW
+            fi
             
         elif [[ "$answer" == "N" || "$answer" == "n" ]]
         then
             # en dan hier.... niet. hier gebeurt niks
-            echo "oke dan niet"
+            echo "Not removing file"
             
         else    
-            echo "Input not recognised. Please try again "
+            echo "Input not recognised. Please try again"
             
         fi
         }
@@ -161,14 +167,14 @@ Main(){
                 then
                     Undelete
                 else
-                    ZipAFilePW
+                    Confirmation "ZipAFilePW"
                 fi
             else
                 if [ $undelete == "true" ]
                 then
                     Undelete
                 else
-                    ZipAFile
+                   Confirmation "ZipAFile" 
                 fi                
             fi
         }
