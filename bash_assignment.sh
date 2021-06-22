@@ -70,6 +70,8 @@ Main(){
         {
 #             result=$(grep -oP '.*/(?=\Q'"$filename"'\E)' ~/trash/logger.txt)
             unzip ~/trash/$filename #-d $result
+            grep -v $filename ~/trash/logger.txt > ~/trash/logger.txt.tmp
+            mv ~/trash/logger.txt.tmp ~/trash/logger.txt
         }
         
     Confirmation()
