@@ -52,7 +52,7 @@ Main(){
         {
         #de syntax om iets te zippen is als volgt:
         #zip [archiefnaam] [bestandnaam]
-        zip -qqerm $filename.zip $filename
+        zip -rm $filename.zip $filename -eP $password 
         mv $filename.zip ~/trash
         path=$(realpath $filename)
         echo "$path, pw=true" >> ~/trash/logger.txt
