@@ -18,9 +18,6 @@ resultaat bugtesting vorige week
 
 - nog geen bevestiging als je iets wilt verwijderen
 
-- regel van bestand wordt nog niet uit de logger gehaald
-(omgekeerde grep)
-
 - oorspronkelijke zipbestand moet weg 
 
 tip : met \rm gebruik je de rm zonder alias, dus dit kun je gebruiken om het oorspronkelijke zip bestand te verwijderen
