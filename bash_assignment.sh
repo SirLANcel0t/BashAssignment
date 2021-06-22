@@ -113,6 +113,7 @@ Main(){
         undelete="false"
         haspassword="false"
         recursive="false"
+        error="false"
         filename=""
         password=""
 
@@ -139,10 +140,12 @@ Main(){
             elif [[ $1 == "-p" && $undelete == "true" ]] || [[ $1 == "-u" && $haspassword == "true" ]]
             then
                 echo "rm+: cannot use -u and -p at the same time"
+                error="true"
                 
-            elif [[ $undelete == "false" && $recursive == "false" && -d ~/$1 ]]
+            elif [[ $undelete == "false" && $recursive == "false" && -d ./$1 ]]
             then
                 echo "rm+: cannot remove a directory without -r"
+                error="true"
                 
 #             elif ! [[ -e $1 || -e ~/$1 || $1 == "-u" || $1 == "-p" || $1 == "-r" ]]
 #             then
@@ -160,22 +163,24 @@ Main(){
             #als password true is en delete is true, voer dan dit uit 
             #als undelete true is, voer dan iets anders uit 
             #kies hier welke functies uitgevoerd worden, je kent het wel
-            
-            if [ $haspassword == "true" ]
+            if [ $error == "false" ]
             then
-                if [ $undelete == "true" ]
+                if [ $haspassword == "true" ]
                 then
-                    Undelete
+                    if [ $undelete == "true" ]
+                    then
+                        Undelete
+                    else
+                        Confirmation "ZipAFilePW"
+                    fi
                 else
-                    Confirmation "ZipAFilePW"
+                    if [ $undelete == "true" ]
+                    then
+                        Undelete
+                    else
+                    Confirmation "ZipAFile" 
+                    fi                
                 fi
-            else
-                if [ $undelete == "true" ]
-                then
-                    Undelete
-                else
-                   Confirmation "ZipAFile" 
-                fi                
             fi
         }
         
