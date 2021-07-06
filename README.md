@@ -1,6 +1,16 @@
 # BashAssignment
 
+===== laatste test om te kijken of we alles hebben =====
 
+- alle requirements zoals die in de assignment staan, doorlopen
+- het (verwijderen van) bestanden met dezelfde naam en ze weer terugbrengen zou niet werken volgens de docent.
+- er zouden /r tekens in ons bestand staan die niet te runnen zijn op linux
+- als het wachtwoord 3x onjuist is moet er iets niet undelete worden maar dat zou wel gebeuren  volgens de docent
+
+
+
+
+update: dit werkt allemaal als het goed is. we gaan het testen aan de hand van de requirements hierboven
 Nieuwe takenlijst herkansing:
 
 - De zogenaamde /r tekens weghalen 
