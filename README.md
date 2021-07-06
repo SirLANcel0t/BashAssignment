@@ -1,5 +1,21 @@
 # BashAssignment
 
+
+Nieuwe takenlijst herkansing:
+
+- De zogenaamde /r tekens weghalen
+- zorgen dat als je een folder undelete, hij ook om een wachtwoord vraagt
+- zorgen dat er geen zip.zip files in de trash folder komen (eerst uitvogelen hoe je dat voor elkaar krijgt uberhaupt)
+
+
+
+
+
+
+
+
+
+///////////////////Oude takenlijst///////////////////////////
 Takenlijst:
 
 TO DO:
@@ -9,7 +25,7 @@ TO DO:
 
 - Alles samenvoegen
 - bugtesten
-
+//////////////////////////////////////////////////////////////
 +++++++++++++++++++++++++++++++
 
 resultaat bugtesting vorige week
