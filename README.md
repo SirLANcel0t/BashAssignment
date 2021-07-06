@@ -3,10 +3,15 @@
 
 Nieuwe takenlijst herkansing:
 
-- De zogenaamde /r tekens weghalen
-- zorgen dat als je een folder undelete, hij ook om een wachtwoord vraagt
-- zorgen dat er geen zip.zip files in de trash folder komen (eerst uitvogelen hoe je dat voor elkaar krijgt uberhaupt)
-
+- De zogenaamde /r tekens weghalen 
+  (opslaan in linux, niet in windows. met vim editor kunnen we eventueel nog de formatting bekijken voordat we het inleveren)
+ 
+- als je te vaak een verkeerd wachtwoord invoert, dan undelete hij alsnog iets, ofzoiets.
+  (dit gaat over de undelete functie)
+  
+  
+- zorgen dat er geen zip.zip files in de trash folder komen
+  (ik heb gevonden hoe dit gebeurt. ik denk dat dit te doen is met een simpele typecheck. heb ook cigdem gevraagd om feedback, nu afwachtend)
 
 
 
